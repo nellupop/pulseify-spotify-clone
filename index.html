@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pulseify</title>
+    <meta name="description" content="A Spotify-inspired responsive music UI built with HTML, CSS, and JavaScript." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand">
+          <div class="brand-mark">▶</div>
+          <div>
+            <h1>Pulseify</h1>
+            <p>Music for focus</p>
+          </div>
+        </div>
+
+        <nav class="nav-card">
+          <a class="nav-link active" href="#">Home</a>
+          <a class="nav-link" href="#">Search</a>
+          <a class="nav-link" href="#">Your Library</a>
+          <a class="nav-link" href="#">Made for You</a>
+        </nav>
+
+        <section class="sidebar-section">
+          <div class="section-header">
+            <h2>Playlists</h2>
+            <button class="ghost-btn" type="button">New</button>
+          </div>
+          <div class="playlist-list">
+            <div class="playlist-item active">
+              <span>Daily Mix</span>
+              <small>24 songs</small>
+            </div>
+            <div class="playlist-item">
+              <span>Evening Drive</span>
+              <small>18 songs</small>
+            </div>
+            <div class="playlist-item">
+              <span>Deep Work</span>
+              <small>12 songs</small>
+            </div>
+          </div>
+        </section>
+      </aside>
+
+      <main class="main-content">
+        <header class="hero">
+          <div>
+            <span class="eyebrow">Good evening</span>
+            <h2>Stay in the flow with a clean, Spotify-style dashboard.</h2>
+            <p>Browse curated songs, tap a card to play, and keep your queue moving from the responsive player below.</p>
+          </div>
+          <button class="primary-btn" type="button">Play all</button>
+        </header>
+
+        <section class="content-grid">
+          <div class="panel panel-wide">
+            <div class="section-header">
+              <h3>Recently played</h3>
+              <a href="#">Show all</a>
+            </div>
+            <div class="song-grid" id="songGrid"></div>
+          </div>
+
+          <div class="panel">
+            <div class="section-header">
+              <h3>Now trending</h3>
+            </div>
+            <div class="mini-card">
+              <span class="mini-label">New release</span>
+              <h4>Midnight Circuit</h4>
+              <p>Lo-fi textures, synth pads, and a smooth pulse.</p>
+            </div>
+            <div class="mini-stats">
+              <div>
+                <strong>1.2M</strong>
+                <span>streams</span>
+              </div>
+              <div>
+                <strong>4.9</strong>
+                <span>listener rating</span>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <footer class="player-bar" aria-label="Music player">
+      <div class="track-info">
+        <img id="trackArt" alt="Album art" />
+        <div>
+          <h4 id="trackTitle">Neon Skyline</h4>
+          <p id="trackArtist">Atlas Echo</p>
+        </div>
+      </div>
+
+      <div class="player-controls">
+        <button class="icon-btn" id="prevBtn" type="button" aria-label="Previous track">⏮</button>
+        <button class="play-btn" id="playBtn" type="button" aria-label="Play or pause">▶</button>
+        <button class="icon-btn" id="nextBtn" type="button" aria-label="Next track">⏭</button>
+      </div>
+
+      <div class="progress-wrap">
+        <div class="progress-meta">
+          <span id="currentTime">0:42</span>
+          <span id="duration">3:24</span>
+        </div>
+        <div class="progress-track" aria-hidden="true">
+          <div class="progress-fill" id="progressFill"></div>
+        </div>
+      </div>
+
+      <div class="player-actions">
+        <span>Vol</span>
+        <div class="volume-track"><div class="volume-fill"></div></div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
